@@ -5,32 +5,165 @@
 <meta charset="utf-8" />  
 <meta name="viewport" content="width=device-width,initial-scale=1" />  
 <title>Приглашение — на свадьбу Юрия и Анны</title>  
-<style>  
-  /* Базовая мобильная вёрстка, сделано для вертикальной моб. ориентации */  
-  :root{--accent:#450909;--muted:#666}  
-  html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}  
-  body{background:#fff;color:#111;display:flex;flex-direction:column;align-items:center;padding:20px;box-sizing:border-box}  
-  .container{max-width:420px;width:100%}  
-  .hero{display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center;padding:18px 12px}  
-  .date{font-weight:700;letter-spacing:4px;color:var(--accent)}  
-  h1{margin:6px 0;font-size:28px}  
-  .names{font-size:22px;font-weight:600}  
-  .lead{color:var(--muted);margin:8px 0 18px}  
-  .section{border-top:1px solid #eee;padding:16px 0}  
-  .small{font-size:14px;color:var(--muted)}  
-  .plan{display:flex;flex-direction:column;gap:10px;margin-top:8px}  
-  .plan .item{display:flex;justify-content:space-between;font-weight:600}  
-  .btn{display:inline-block;padding:10px 18px;border-radius:30px;border:1px solid var(--accent);background:transparent;color:var(--accent);text-decoration:none;font-weight:600}  
-  .contacts{font-size:14px;color:var(--muted);margin-top:8px}  
-  /* RSVP form styling (simple) */  
-  form.rsvp{display:flex;flex-direction:column;gap:8px}  
-  input[type="text"], select, textarea{padding:10px;border:1px solid #ddd;border-radius:8px;font-size:15px}  
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}  
-  footer{margin:18px 0 40px;font-size:13px;color:var(--muted);text-align:center}  
-  /* countdown */  
-  .count{display:flex;gap:8px;justify-content:center;margin-top:12px}  
-  .count .col{background:#f8f4f4;padding:10px 12px;border-radius:8px;min-width:58px;text-align:center}  
-  @media(min-width:900px){body{padding:40px} .container{max-width:780px}}  
+<style>  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap');
+
+  :root {
+    --accent: #a3525c;
+    --text: #4b3b38;
+    --muted: #7d6d6b;
+    --bg1: #fdfdfd;
+    --bg2: #f4f7fa;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text);
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 420px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    backdrop-filter: blur(6px);
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 24px 18px;
+  }
+
+  .date {
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--accent);
+  }
+
+  h1 {
+    margin: 10px 0 4px;
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: var(--accent);
+  }
+
+  .lead {
+    color: var(--muted);
+    margin: 12px 0 22px;
+    font-size: 17px;
+  }
+
+  .section {
+    border-top: 1px solid #eee;
+    padding: 18px 20px;
+  }
+
+  .small {
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .plan .item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 2px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: transparent;
+    color: var(--accent);
+  }
+
+  .contacts {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  form.rsvp {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input[type="text"], select, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  footer {
+    margin: 20px 0 40px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .count {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .count .col {
+    background: #f8f4f4;
+    padding: 10px 12px;
+    border-radius: 10px;
+    min-width: 58px;
+    text-align: center;
+  }
+
+  @media (min-width: 900px) {
+    body { padding: 40px; }
+    .container { max-width: 720px; }
+  }
+</style>  
 </style>  
 </head>  
 <body>  
