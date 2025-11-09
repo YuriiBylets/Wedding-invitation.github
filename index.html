@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Наше событие</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Юрий и Анна — Свадебное приглашение</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Мы женимся!</h1>
-    <p>04 | 06 | 2026</p>
-    <h2>Дмитрий & Александра</h2>
-  </header>
 
-  <section class="invitation-text">
-    <p>Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу!</p>
-  </section>
+<header class="hero">
+  <h1>Юрий</h1>
+  <p class="and">&</p>
+  <h1>Анна</h1>
+  <hr class="line">
+  <p class="date">16 | 06 | 2026</p>
+  <p class="we-marry">Мы женимся!</p>
+  <img class="photo" src="photo.jpg" alt="">
+</header>
 
-  <section class="program">
-    <h3>План дня</h3>
-    <ul>
-      <li>12:00 — Сбор гостей около …</li>
-      <li>15:00 — Празднование на площадке …</li>
-      <li>22:00 — Окончание вечера</li>
-    </ul>
-  </section>
+<section class="greeting">
+  <h2>Дорогие гости!</h2>
+  <p>Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу!</p>
+</section>
 
-  <section class="location">
-    <h3>Место проведения</h3>
-    <p>Площадка "Event Loft", Набережная Реки Фонтанки, 59</p>
-  </section>
+<section class="calendar-block">
+  <h2>Июнь 2026</h2>
+  <img src="calendar.png" class="calendar-img">
+</section>
 
-  <section class="dress-code">
-    <h3>Дресс-код</h3>
-    <p>Мы будем рады, если выберете наряды в пастельных тонах…</p>
-  </section>
+<section class="plan">
+  <h2>План дня</h2>
+  <p>12:00 — Сбор гостей</p>
+  <p>12:20 — Регистрация брака</p>
+  <p>15:00 — Празднование на площадке</p>
+  <p>22:00 — Окончание вечера</p>
+</section>
 
-  <section class="details">
-    <h3>Детали</h3>
-    <p>Главное для нас - ваше присутствие…</p>
-  </section>
+<section class="location">
+  <h2>Место проведения</h2>
+  <p>Площадка "Event Loft"<br>Адрес будет указан позже</p>
+  <img src="map.png" class="map">
+</section>
 
-  <section class="rsvp">
-    <h3>Анкета гостя</h3>
-    <form action="submit.php" method="post">
-      <label>Фамилия Имя<input type="text" name="name"/></label>
-      <label>Будут ли с вами дети?
-        <select name="kids"><option>Да</option><option>Нет</option></select>
-      </label>
-      <label>Подтвердите своё присутствие
-        <select name="attendance"><option>С удовольствием приду</option><option>Буду со второй половинкой</option><option>К сожалению, не смогу присутствовать</option></select>
-      </label>
-      <label>Что предпочитаете из напитков?
-        <select name="drink">
-          <option>Водка</option>
-          <option>Виски</option>
-          <option>Шампанское</option>
-          <option>Вино белое</option>
-          <option>Вино красное</option>
-        </select>
-      </label>
-      <button type="submit">Отправить</button>
-    </form>
-  </section>
+<section class="dresscode">
+  <h2>Дресс-код</h2>
+  <p>Будем рады, если выберете наряды в пастельных оттенках.</p>
+</section>
 
-  <footer class="contacts">
-    <p>Жених: 8 (964) 373-01-23</p>
-    <p>Невеста: 8 (953) 368-01-23</p>
-  </footer>
+<section class="gifts">
+  <h2>Пожелания</h2>
+  <p>Главное для нас — ваше присутствие. Будем признательны за альтернативу букетам в виде бутылочки вина или открытки.</p>
+</section>
+
+<section class="form">
+  <h2>Анкета гостя</h2>
+  <form>
+    <label>Фамилия Имя:
+      <input type="text" name="name">
+    </label>
+
+    <p>Будут ли с вами дети?</p>
+    <label><input type="radio" name="kids"> Да</label>
+    <label><input type="radio" name="kids"> Нет</label>
+
+    <p>Подтвердите присутствие:</p>
+    <label><input type="radio" name="attendance"> С удовольствием приду</label><br>
+    <label><input type="radio" name="attendance"> Буду со второй половинкой</label><br>
+    <label><input type="radio" name="attendance"> К сожалению, не смогу присутствовать</label>
+
+    <p>Что предпочитаете из напитков?</p>
+    <label><input type="checkbox"> Водка</label>
+    <label><input type="checkbox"> Виски</label>
+    <label><input type="checkbox"> Шампанское</label>
+    <label><input type="checkbox"> Вино белое</label>
+    <label><input type="checkbox"> Вино красное</label>
+    
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+<section class="contacts">
+  <h2>Контакты</h2>
+  <p>Жених: 8 (708) 744-90-08</p>
+  <p>Невеста: 8 (___) ___-__-__</p>
+</section>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 </body>
 </html>
