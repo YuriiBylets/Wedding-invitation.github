@@ -173,3 +173,35 @@ body {
   .names { font-size: 36px; }
   .photo { width: 95%; }
 }
+.countdown {
+  background: #ffffff;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 600px;
+  border-radius: 25px;
+  border: 3px solid #ffc1d6;
+  box-shadow: 0px 0px 15px rgba(255, 182, 193, 0.5);
+}
+
+.timer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #5b372e;
+  margin-top: 10px;
+}
+
+.timer-box .heart {
+  font-size: 28px;
+  margin: 0 10px;
+}
+
+.numbers {
+  background: #ffe6ef;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid #ffb1cb;
+  }
+  
