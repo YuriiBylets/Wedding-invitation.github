@@ -1,102 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Свадебное приглашение — Юрий и Анна</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Свадебное приглашение — Юрий и Анна</title>
+
+  <!-- Google Font (Cormorant Garamond) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-<div class="main-container">
 
-<header class="hero">
-  <h1>Юрий</h1>
-  <p class="and">&</p>
-  <h1>Анна</h1>
-  <hr class="line">
-  <p class="date">17 | 06 | 2026</p>
-  <p class="we-marry">Мы женимся!</p>
-  <img class="photo" src="photo.jpg" alt="">
-</header>
+  <div class="page-bg">
+    <div class="center-strip">
 
-<section class="greeting">
-  <h2>Дорогие гости!</h2>
-  <p>Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу!</p>
-</section>
+      <header class="hero">
+        <h1 class="names">Юрий &amp; Анна</h1>
+        <p class="date">16.06.2026</p>
+        <p class="subtitle">Мы женимся!</p>
+      </header>
 
-<section class="calendar-block">
-  <h2>Июнь 2026</h2>
-  <img src="calendar.png" class="calendar-img">
-</section>
+      <section class="photo-block">
+        <img src="photo.jpg" alt="Юрий и Анна" class="photo">
+      </section>
 
-<section class="plan">
-  <h2>План дня</h2>
-  <p>12:00 — Сбор гостей</p>
-  <p>12:20 — Регистрация брака</p>
-  <p>15:00 — Празднование на площадке</p>
-  <p>22:00 — Окончание вечера</p>
-</section>
+      <section class="text-block">
+        <h2>Дорогие гости!</h2>
+        <p>Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу и будем счастливы видеть каждого из вас.</p>
+      </section>
 
-<section class="location">
-  <h2>Место проведения</h2>
-  <p>Площадка "Event Loft"<br>Адрес будет указан позже</p>
-  <img src="map.png" class="map">
-</section>
+      <section class="details-block">
+        <div class="card">
+          <h3>План дня</h3>
+          <ul>
+            <li><strong>12:00</strong> — Сбор гостей</li>
+            <li><strong>12:30</strong> — Регистрация</li>
+            <li><strong>15:00</strong> — Банкет</li>
+            <li><strong>22:00</strong> — Окончание вечера</li>
+          </ul>
+        </div>
 
-<section class="dresscode">
-  <h2>Дресс-код</h2>
-  <p>Мы будем рады, если выберете наряды в пастельных оттенках.</p>
-</section>
+        <div class="card">
+          <h3>Место проведения</h3>
+          <p>Площадка "Event Loft"</p>
+          <p>Адрес: будет указан дополнительно.</p>
+          <img src="map.png" alt="Карта" class="map">
+        </div>
 
-<section class="gifts">
-  <h2>Пожелания</h2>
-  <p>Главное для нас — ваше присутствие. Будем признательны за альтернативу букетам в виде бутылочки вина или открытки.</p>
-</section>
+        <div class="card">
+          <h3>Дресс-код</h3>
+          <p>Пастельные оттенки — нежно и элегантно.</p>
+        </div>
 
-<section class="form">
-  <h2>Анкета гостя</h2>
-  
-  <form>
-    <label>Фамилия Имя:
-      <input type="text" name="name">
-    </label>
+        <div class="card">
+          <h3>Пожелания / подарки</h3>
+          <p>Главное для нас — ваше присутствие. Вместо букета можно подарить бутылку вина или открытку с тёплыми словами.</p>
+        </div>
+      </section>
 
-    <p>Будут ли с вами дети?</p>
-    <label><input type="radio" name="kids"> Да</label>
-    <label><input type="radio" name="kids"> Нет</label>
+      <section class="rsvp-block">
+        <h2>Анкета гостя</h2>
+        <form class="rsvp-form" action="#" method="post" onsubmit="alert('Спасибо! В реальном проекте замените action на серверный обработчик или подключите Google Forms.'); return false;">
+          <label>ФИО
+            <input type="text" name="name" required>
+          </label>
 
-    <p>Подтвердите своё присутствие:</p>
-    <label><input type="radio" name="attendance"> С удовольствием приду</label><br>
-    <label><input type="radio" name="attendance"> Буду со второй половинкой</label><br>
-    <label><input type="radio" name="attendance"> К сожалению, не смогу присутствовать</label>
+          <label>Телефон / e-mail
+            <input type="text" name="contact">
+          </label>
 
-    <p>Что предпочитаете из напитков?</p>
-    <label><input type="checkbox"> Водка</label>
-    <label><input type="checkbox"> Виски</label>
-    <label><input type="checkbox"> Шампанское</label>
-    <label><input type="checkbox"> Вино белое</label>
-    <label><input type="checkbox"> Вино красное</label>
-    
-    <button type="submit">Отправить</button>
-  </form>
+          <label>Будут ли с вами дети?
+            <select name="kids">
+              <option value="no">Нет</option>
+              <option value="yes">Да</option>
+            </select>
+          </label>
 
-</section>
+          <label>Подтверждение присутствия
+            <select name="attendance">
+              <option value="will">С удовольствием приду</option>
+              <option value="with_plus">Буду со второй половинкой</option>
+              <option value="cannot">К сожалению, не смогу присутствовать</option>
+            </select>
+          </label>
 
-<section class="contacts">
-  <h2>Контакты</h2>
-  <p>Жених: 8 (___) ___-__-__</p>
-  <p>Невеста: 8 (___) ___-__-__</p>
-</section>
+          <label>Напитки / предпочтения
+            <select name="drink">
+              <option>Шампанское</option>
+              <option>Вино (белое)</option>
+              <option>Вино (красное)</option>
+              <option>Виски</option>
+              <option>Другое</option>
+            </select>
+          </label>
 
-</div> <!-- КОНТЕЙНЕР -->
+          <label>Комментарий (пищевые предпочтения и т.д.)
+            <textarea name="note" rows="3"></textarea>
+          </label>
 
-<audio autoplay loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+
+      <section class="contacts">
+        <h3>Контакты</h3>
+        <p>Жених: 8 (___) ___-__-__</p>
+        <p>Невеста: 8 (___) ___-__-__</p>
+      </section>
+
+    </div> <!-- center-strip -->
+  </div> <!-- page-bg -->
+
+  <!-- Фоновая музыка (замените music.mp3 на вашу мелодию) -->
+  <audio id="bg-audio" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает проигрывание аудио.
+  </audio>
 
 </body>
 </html>
