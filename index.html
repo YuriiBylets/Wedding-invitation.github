@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Юрий и Анна — Свадебное приглашение</title>
+<title>Свадебное приглашение — Юрий и Анна</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="main-container">
 
 <header class="hero">
   <h1>Юрий</h1>
@@ -44,7 +46,7 @@
 
 <section class="dresscode">
   <h2>Дресс-код</h2>
-  <p>Будем рады, если выберете наряды в пастельных оттенках.</p>
+  <p>Мы будем рады, если выберете наряды в пастельных оттенках.</p>
 </section>
 
 <section class="gifts">
@@ -54,6 +56,7 @@
 
 <section class="form">
   <h2>Анкета гостя</h2>
+  
   <form>
     <label>Фамилия Имя:
       <input type="text" name="name">
@@ -63,7 +66,7 @@
     <label><input type="radio" name="kids"> Да</label>
     <label><input type="radio" name="kids"> Нет</label>
 
-    <p>Подтвердите присутствие:</p>
+    <p>Подтвердите своё присутствие:</p>
     <label><input type="radio" name="attendance"> С удовольствием приду</label><br>
     <label><input type="radio" name="attendance"> Буду со второй половинкой</label><br>
     <label><input type="radio" name="attendance"> К сожалению, не смогу присутствовать</label>
@@ -77,13 +80,16 @@
     
     <button type="submit">Отправить</button>
   </form>
+
 </section>
 
 <section class="contacts">
   <h2>Контакты</h2>
-  <p>Жених: 8 (708) 744-90-08</p>
+  <p>Жених: 8 (___) ___-__-__</p>
   <p>Невеста: 8 (___) ___-__-__</p>
 </section>
+
+</div> <!-- КОНТЕЙНЕР -->
 
 <audio autoplay loop>
   <source src="music.mp3" type="audio/mpeg">
