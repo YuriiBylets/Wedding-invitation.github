@@ -1,236 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Свадебное приглашение — Юрий и Анна</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-<html lang="ru">  
-<head>  
-<meta charset="utf-8" />  
-<meta name="viewport" content="width=device-width,initial-scale=1" />  
-<title>Приглашение — на свадьбу Юрия и Анны</title>  
-<style>  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap');
+  <header class="hero">
+    <h1>Мы женимся!</h1>
+    <p>16 | 06 | 2026</p>
+    <h2>Юрий & Анна</h2>
+  </header>
 
-  :root {
-    --accent: #a3525c;
-    --text: #4b3b38;
-    --muted: #7d6d6b;
-    --bg1: #fdfdfd;
-    --bg2: #f4f7fa;
-  }
+  <section class="invitation-text">
+    <p>Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу!</p>
+  </section>
 
-  html, body {
-    height: 100%;
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--text);
-    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+  <section class="program">
+    <h3>План дня</h3>
+    <ul>
+      <li>12:00 — Сбор гостей около ...</li>
+      <li>15:00 — Празднование на площадке ...</li>
+      <li>22:00 — Окончание вечера</li>
+    </ul>
+  </section>
 
-  .container {
-    max-width: 420px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    backdrop-filter: blur(6px);
-  }
+  <section class="location">
+    <h3>Место проведения</h3>
+    <p>Адрес будет указан позже</p>
+  </section>
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    padding: 24px 18px;
-  }
+  <section class="dress-code">
+    <h3>Дресс-код</h3>
+    <p>Мы будем рады, если выберете наряды в пастельных тонах.</p>
+  </section>
 
-  .date {
-    font-weight: 600;
-    letter-spacing: 4px;
-    color: var(--accent);
-  }
-
-  h1 {
-    margin: 10px 0 4px;
-    font-size: 30px;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  .names {
-    font-family: 'Great Vibes', cursive;
-    font-size: 36px;
-    color: var(--accent);
-  }
-
-  .lead {
-    color: var(--muted);
-    margin: 12px 0 22px;
-    font-size: 17px;
-  }
-
-  .section {
-    border-top: 1px solid #eee;
-    padding: 18px 20px;
-  }
-
-  .small {
-    font-size: 15px;
-    color: var(--muted);
-  }
-
-  .plan {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 8px;
-  }
-
-  .plan .item {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 10px 22px;
-    border-radius: 30px;
-    border: 2px solid var(--accent);
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-
-  .btn:hover {
-    background: transparent;
-    color: var(--accent);
-  }
-
-  .contacts {
-    font-size: 15px;
-    color: var(--muted);
-    margin-top: 10px;
-  }
-
-  form.rsvp {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  input[type="text"], select, textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: inherit;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  footer {
-    margin: 20px 0 40px;
-    font-size: 13px;
-    color: var(--muted);
-    text-align: center;
-  }
-
-  .count {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 12px;
-  }
-
-  .count .col {
-    background: #f8f4f4;
-    padding: 10px 12px;
-    border-radius: 10px;
-    min-width: 58px;
-    text-align: center;
-  }
-
-  @media (min-width: 900px) {
-    body { padding: 40px; }
-    .container { max-width: 720px; }
-  }
-</style>  
-</style>  
-</head>  
-<body>  
-<div class="container">  
-  <div class="hero">  
-    <div class="date">04 | 06 | 2026</div>  
-    <h1>Мы женимся!</h1>  
-    <div class="names">Юрий <br/> и <br/> Анна</div>  
-    <p class="lead">Этот волнительный день мы хотим разделить с самыми дорогими и близкими нам людьми. Приглашаем на нашу свадьбу!</p>  
-    <a class="btn" href="#rsvp">Заполнить анкету гостя</a>  
-  </div>    <div class="section">  
-    <div class="small">Приблизительный План дня</div>  
-    <div class="plan">  
-      <div class="item"><span>17:00</span><span>Сбор гостей у ресторана</span></div>  
-      <div class="item"><span>17:30</span><span>Торжественая церемония </span></div>  
-      <div class="item"><span>18:00</span><span>Начало банкета </span></div>  
-    </div>  
-  </div>    <div class="section">  
-    <div class="small">Место проведения</div>  
-    <p class="small">Площадка "Event Loft", Набережная Реки Фонтанки, 59. На входе вас встретят и проводят в банкетный зал.</p>  
-  </div>    <div class="section">  
-    <div class="small">Дресс-код</div>  
-    <p class="small">Мы не ограничиваем вас, но будем рады пастельным тонам. Мужчины — классические брюки и рубашки светлых оттенков.</p>  
-  </div>    <div class="section" id="rsvp">  
-    <div class="small">Анкета гостя</div>  
-    <!-- Вариант A (простой): ссылка на Google Form -->  
-    <p class="small">Проще всего: <a href="https://forms.gle/" target="_blank" rel="noopener">создать Google Form</a> и вставить ссылку сюда.</p>  <!-- Вариант B (локальная форма, отправка на email через mailto) -->  
-<form class="rsvp" onsubmit="alert('Спасибо! Для простоты этот пример отправляет данные через email. Подробно: используй Google Forms или Formspree для сбора.' ); return false;">  
-  <input type="text" placeholder="Фамилия Имя" required />  
-  <div class="grid">  
-    <select><option>С удовольствием приду</option><option>Буду со второй половинкой</option><option>К сожалению, не смогу</option></select>  
-    <select><option>Будут дети?</option><option>Да</option><option>Нет</option></select>  
-  </div>  
-  <textarea rows="3" placeholder="Комментарий (например предпочтения по напиткам)"></textarea>  
-  <button class="btn" type="submit">Отправить</button>  
-</form>
-
-  </div>    <div class="section">  
-    <div class="small">Контакты</div>  
-    <div class="contacts">  
-      Жених: 8 (964) 373-01-23<br/>  
-      Невеста: 8 (953) 368-01-23  
-    </div>  
-  </div>    <div class="section">  
-    <div class="small">Ждём Вас через...</div>  
-    <div class="count" id="countdown">  
-      <div class="col"><div id="days">--</div><div class="small">Дней</div></div>  
-      <div class="col"><div id="hours">--</div><div class="small">Часов</div></div>  
-      <div class="col"><div id="mins">--</div><div class="small">Минут</div></div>  
-      <div class="col"><div id="secs">--</div><div class="small">Секунд</div></div>  
-    </div>  
-  </div>    <footer>Внимание: страница оптимизирована под мобильные устройства в вертикальной ориентации.</footer>  
-</div>  <script>  
-  // Countdown to 2026-06-04 12:00:00 (local)  
-  const target = new Date('2026-06-04T12:00:00');  
-  function tick(){  
-    const now = new Date();  
-    let diff = Math.max(0, target - now);  
-    const d = Math.floor(diff/86400000); diff-=d*86400000;  
-    const h = Math.floor(diff/3600000); diff-=h*3600000;  
-    const m = Math.floor(diff/60000); diff-=m*60000;  
-    const s = Math.floor(diff/1000);  
-    document.getElementById('days').textContent = d;  
-    document.getElementById('hours').textContent = h;  
-    document.getElementById('mins').textContent = m;  
-    document.getElementById('secs').textContent = s;  
-  }  
-  tick(); setInterval(tick,1000);  
-</script>  </body>  
-</html>
+  <section class="details">
+    <h3>Детали</h3
