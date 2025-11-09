@@ -31,6 +31,21 @@
 
       <section class="details-block">
         <div class="card">
+          <section class="countdown">
+  <h2>До свадьбы осталось:</h2>
+
+  <div class="timer-box">
+    <div class="heart">❤️</div>
+    <div class="numbers">
+      <span id="days"></span> дней
+      <span id="hours"></span> часов
+      <span id="minutes"></span> минут
+      <span id="seconds"></span> секунд
+    </div>
+    <div class="heart">❤️</div>
+  </div>
+          </section>
+          
           <h3>План дня</h3>
           <ul>
             <li><strong>17:00</strong> — Сбор гостей</li>
@@ -112,6 +127,27 @@
     <source src="music.mp3" type="audio/mpeg">
     Ваш браузер не поддерживает проигрывание аудио.
   </audio>
+<script>
+  const weddingDate = new Date("2026-06-16T00:00:00").getTime();
 
+  function updateTimer() {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+</script>
+  
 </body>
 </html>
