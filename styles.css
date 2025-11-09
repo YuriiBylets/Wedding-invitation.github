@@ -1,11 +1,10 @@
 body {
   margin: 0;
   background: #fffaf7;
-  font-family: "Playwrite HU", serif;
+  font-family: "Great Vibes", cursive;
   color: #5b372e;
   text-align: center;
 }
-
 .main-container {
   max-width: 600px;
   margin: 0 auto;
