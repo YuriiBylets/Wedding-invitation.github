@@ -260,3 +260,49 @@ body {
   50% { transform: scale(1.12); }
   100% { transform: scale(1); }
   }
+/* === Ограничиваем ширину таймера и ставим по центру === */
+.timer {
+  max-width: 300px;
+  margin: 0 auto;
+  background: #ffffffaa;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+/* === Ограничиваем ширину календаря === */
+.calendar-section {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.calendar {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* === Мобильная версия (телефоны) === */
+@media (max-width: 480px) {
+  .timer {
+    max-width: 260px;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .calendar-section {
+    max-width: 260px;
+  }
+
+  .calendar {
+    max-width: 240px;
+  }
+
+  .calendar th,
+  .calendar td {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+
