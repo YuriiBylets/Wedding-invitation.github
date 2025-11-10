@@ -205,3 +205,58 @@ body {
   border: 2px solid #ffb1cb;
   }
   
+.calendar-real {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  border: 3px solid #ffb6c9;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255,182,193,0.45);
+}
+
+.calendar-box {
+  background: #ffe3ec;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.month-name {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #5b372e;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-grid div {
+  padding: 10px 0;
+  font-size: 18px;
+  color: #5b372e;
+}
+
+.w {
+  font-weight: bold;
+  color: #a14b61;
+}
+
+.day-heart {
+  background: #ff7fa7;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: bold;
+  animation: calendarPulse 1.3s infinite;
+}
+
+@keyframes calendarPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+  }
